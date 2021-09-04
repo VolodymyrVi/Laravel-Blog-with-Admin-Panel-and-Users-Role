@@ -26,6 +26,9 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
+                    <div class="col-3">
+                        <a href="{{ route('admin.category.create') }}" type="button" class="btn btn-block btn-primary">Додати нову категорію</a>
+                    </div>
                     <div class="col-12">
                         Категорії
                     </div>
