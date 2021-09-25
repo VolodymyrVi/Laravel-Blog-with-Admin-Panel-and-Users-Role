@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Dashboard</h1>
+                        <h1 class="m-0">Додати нову категорію</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -27,7 +27,13 @@
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
                     <div class="col-12">
-                        Додати нову категорію
+                        <form action="" class="w-25">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Назва категорії">
+                            </div>
+                            <input type="submit" class="btn btn-primary" value="Додати">
+
+                        </form>
                     </div>
 
                 </div>
