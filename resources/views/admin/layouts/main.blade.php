@@ -91,6 +91,11 @@
             ['height', ['height']]
         ]
     });
+
+    $(function (){
+        bsCustomFileInput.init();
+    })
+
 </script>
 </body>
 </html>
