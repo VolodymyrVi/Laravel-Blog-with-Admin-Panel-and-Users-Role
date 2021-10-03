@@ -54,6 +54,11 @@
                                     <input type="file" class="custom-file-input" name="preview_image">
                                     <label class="custom-file-label">Обрати файл</label>
                                 </div>
+                                @error('preview_image')
+                                <div class="text-danger">
+                                    Це поле необхідно заповнити
+                                </div>
+                                @enderror
 
                             </div>
 
@@ -63,7 +68,27 @@
                                     <input type="file" class="custom-file-input" name="main_image">
                                     <label class="custom-file-label">Обрати файл</label>
                                 </div>
+                                @error('main_image')
+                                <div class="text-danger">
+                                    Це поле необхідно заповнити
+                                </div>
+                                @enderror
 
+                            </div>
+                            <div class="form-group w-50">
+                                <label for="">Оберіть категорію</label>
+                                <select class="form-control" name="category_id" id="">
+                                    @foreach($categories as $category)
+                                    <option value="{{ $category->id }}"
+                                    {{ $category->id == old('category_id') ? ' selected' : '' }}
+                                    >{{ $category->title }}</option>
+                                    @endforeach
+                                </select>
+                                @error('category_id')
+                                <div class="text-danger">
+                                    Це поле необхідно заповнити
+                                </div>
+                                @enderror
                             </div>
 
                             <div class="form-group">
