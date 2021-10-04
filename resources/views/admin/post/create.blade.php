@@ -84,11 +84,16 @@
                                     >{{ $category->title }}</option>
                                     @endforeach
                                 </select>
-                                @error('category_id')
-                                <div class="text-danger">
-                                    Це поле необхідно заповнити
-                                </div>
-                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <lavel>Теги</lavel>
+                                <select class="select2" multiple="multiple" data-placeholder="Обрати теги" style="width: 100%" name="tag_ids[]" id="">
+                                    @foreach($tags as $tag)
+                                        <option {{ is_array( old('tag_ids')) && in_array($tag->id, old('tag_ids')) ? ' selected' : '' }} value="{{ $tag->id }}">{{ $tag->title }}</option>
+                                    @endforeach
+                                </select>
+
                             </div>
 
                             <div class="form-group">
