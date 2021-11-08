@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8 ">
+                    <div class="col-8">
                         <div class="card">
 
                             <div class="card-body table-responsive p-0">

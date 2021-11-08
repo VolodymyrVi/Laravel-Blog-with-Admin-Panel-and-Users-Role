@@ -29,14 +29,14 @@
                         <!-- small box -->
                         <div class="small-box bg-info">
                             <div class="inner">
-                                <h3>#</h3>
+                                    <h3>10</h3>
 
                                 <p>Пости, що сподобались</p>
                             </div>
                             <div class="icon">
-                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart"></i>
                             </div>
-                            <a href="#" class="small-box-footer">Детальніше <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="{{ route('personal.liked.index') }}" class="small-box-footer">Детальніше <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <!-- ./col -->
@@ -44,19 +44,17 @@
                         <!-- small box -->
                         <div class="small-box bg-success">
                             <div class="inner">
-                                <h3>#</h3>
+                                <h3>10</h3>
 
-                                <p>Коментарі</p>
+                                <p>Коменти</p>
                             </div>
                             <div class="icon">
                                 <i class="far fa-comment"></i>
                             </div>
-                            <a href="#" class="small-box-footer">Детальніше <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="{{ route('personal.comment.index') }}" class="small-box-footer">Детальніше <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <!-- ./col -->
-
-
                 </div>
                 <!-- /.row -->
 
