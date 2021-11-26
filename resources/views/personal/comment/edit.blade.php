@@ -34,7 +34,7 @@
                             @method('PATCH')
                             <div class="form-group">
 
-                                <textarea class="form-control w-50" name="message">{{ $comment->message }}</textarea>
+                                <textarea class="form-control" name="message">{{ $comment->message }}</textarea>
                                 @error('message')
                                 <div class="text-danger">
                                     Це поле необхідно заповнити
