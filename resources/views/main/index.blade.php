@@ -36,78 +36,25 @@
                             </a>
                         </div>
                         @endforeach
+
                     </div>
 
                 </section>
             </div>
             <div class="col-md-4 sidebar" data-aos="fade-left">
-                <div class="widget widget-post-carousel">
-                    <h5 class="widget-title">Post Lists</h5>
-                    <div class="post-carousel">
-                        <div id="carouselId" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselId" data-slide-to="1"></li>
-                                <li data-target="#carouselId" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner" role="listbox">
-                                <figure class="carousel-item active">
-                                    <img src="{{ asset('assets/images/blog_widget_carousel.jpg') }}" alt="First slide">
-                                    <figcaption class="post-title">
-                                        <a href="#!">Front becomes an official Instagram Marketing Partner</a>
-                                    </figcaption>
-                                </figure>
-                                <figure class="carousel-item">
-                                    <img src="{{ asset('assets/images/blog_7.jpg') }}" alt="First slide">
-                                    <figcaption class="post-title">
-                                        <a href="#!">Front becomes an official Instagram Marketing Partner</a>
-                                    </figcaption>
-                                </figure>
-                                <div class="carousel-item">
-                                    <img src="{{ asset('assets/images/blog_5.jpg') }}" alt="First slide">
-                                    <figcaption class="post-title">
-                                        <a href="#!">Front becomes an official Instagram Marketing Partner</a>
-                                    </figcaption>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="widget widget-post-list">
-                    <h5 class="widget-title">Post List</h5>
+                    <h5 class="widget-title">Популярні пости</h5>
                     <ul class="post-list">
+                        @foreach ($likedPosts as $post)
                         <li class="post">
                             <a href="#!" class="post-permalink media">
-                                <img src="{{ asset('assets/images/blog_widget_1.jpg{{ asset(') }}') }}" alt="blog post">
+                                <img src="{{ 'storage/' . $post->preview_image}}" alt="blog post">
                                 <div class="media-body">
-                                    <h6 class="post-title">Front becomes an official Instagram Marketing Partner</h6>
+                                    <h6 class="post-title">{{ $post->title }}</h6>
                                 </div>
                             </a>
                         </li>
-                        <li class="post">
-                            <a href="#!" class="post-permalink media">
-                                <img src="{{ asset('assets/images/blog_widget_2.jpg') }}" alt="blog post">
-                                <div class="media-body">
-                                    <h6 class="post-title">Front becomes an official Instagram Marketing Partner</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="post">
-                            <a href="#!" class="post-permalink media">
-                                <img src="{{ asset('assets/images/blog_widget_3.jpg') }}" alt="blog post">
-                                <div class="media-body">
-                                    <h6 class="post-title">Front becomes an official Instagram Marketing Partner</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="post">
-                            <a href="#!" class="post-permalink media">
-                                <img src="{{ asset('assets/images/blog_widget_4.jpg') }}" alt="blog post">
-                                <div class="media-body">
-                                    <h6 class="post-title">Front becomes an official Instagram Marketing Partner</h6>
-                                </div>
-                            </a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="widget">
