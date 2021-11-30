@@ -31,6 +31,16 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ route('main.index') }}">Блог</a>
                     </li>
+
+                    <li class="nav-item dropdown">
+
+                        @auth()
+                            <a class="nav-link" href="{{ route('personal.main.index') }}">Особистий Кабінет</a>
+                        @endauth
+                        @guest()
+                                <a class="nav-link" href="{{ route('personal.main.index') }}">Увійти</a>
+                            @endguest
+                    </li>
                 </ul>
             </div>
         </nav>
