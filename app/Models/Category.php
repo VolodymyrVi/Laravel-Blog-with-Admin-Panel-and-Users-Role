@@ -12,4 +12,11 @@ class Category extends Model
     use SoftDeletes;
     protected $table = 'categories';
     protected $guarded = false;
+
+    protected $with = ['posts:id,title'];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'category_id', 'id');
+    }
 }

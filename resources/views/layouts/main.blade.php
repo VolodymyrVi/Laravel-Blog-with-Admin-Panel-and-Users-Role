@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edica :: Home</title>
+    <title>Блог VolodymrVi</title>
     <link rel="stylesheet" href="{{   asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/font-awesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/aos/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <script src="{{ asset('assets/vendors/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/vendors/popper.js/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/vendors/aos/aos.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="{{ asset('assets/js/loader.js') }}"></script>
+
 </head>
 <body>
 <div class="edica-loader"></div>
@@ -25,6 +30,19 @@
                 <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ route('main.index') }}">Блог</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{{ route('category.index') }}">Категорії</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        @auth()
+                            <a class="nav-link" href="{{ route('personal.main.index') }}">Особистий Кабінет</a>
+                        @endauth
+                        @guest()
+                                <a class="nav-link" href="{{ route('personal.main.index') }}">Увійти</a>
+                            @endguest
                     </li>
                 </ul>
             </div>
@@ -108,10 +126,7 @@
         </div>
     </div>
 </footer>
-<script src="assets/vendors/popper.js/popper.min.js"></script>
-<script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="assets/vendors/aos/aos.js"></script>
-<script src="assets/js/main.js"></script>
+
 <script>
     AOS.init({
         duration: 1000
