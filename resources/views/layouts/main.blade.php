@@ -31,6 +31,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ route('main.index') }}">Блог</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{{ route('category.index') }}">Категорії</a>
+                    </li>
 
                     <li class="nav-item dropdown">
 
